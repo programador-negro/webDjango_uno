@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Primera web Django</title>
+        <link rel="stylesheet" type="text/css" href= "static/style_index.css" >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+    <body >
+        {% include "barras/barra.html" %}
+        {# Esta etiqueta incrusta un archivo HTML #}
+        <div id = "b">
+        <h1 style = 'color: red;'>
+            Mi Primera pagina web en Django y Python
+        </h1>
+        <p>
+            Mi nombre es {{nombre}}<br>
+            <!-- Datos de FECHAS dentro de HTML-->
+            y hoy es {{dia.day}}/{{dia.month}}/{{dia.year}}
+        </p>
+        <h1>
+            Ciudades de Colombia:
+        </h1>
+        <ul>
+            <!-- Bucle FOR dentro HTML -->
+            {% for ciudad in ciudades %}
+                <li>
+                    {{ ciudad.title }}
+                </li>
+            {% endfor %}
+        </ul>
+        <!-- Condicionales dentro de HTML-->
+        <h1>Paises: </h1>
+        <ul>
+            {%if paises%}
+                {% for pais in paises %}
+                    <li>
+                        {{pais}}
+                    </li>
+                {%endfor%}
+            {%else%}
+                <p>No hay informacion para mostrar.</p>
+            {%endif%}
+        </ul>
+        {# COMENTARIO CON NUMERAL o ALMUADILLA#}
+        {% comment %}
+            COMENTARIO CON CIERRE
+        {% endcomment %}
+    </div>
+    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--HwXlqFEY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://code4coders.files.wordpress.com/2019/05/fb96e-1lywb7ys4csml17u2fhu5ig.png%3Fw%3D700%26zoom%3D2%2522%2520Logo%2520Title%2520Text%25201%2522" class="img-thumbnail" alt="Responsive image">
+    </body>
+
+    <style>
+      body {
+        background-color: black;
+    }
+    #b {
+        background-color: rgb(5, 45, 6);
+        color: whitesmoke;
+        margin-left: 30%;
+    }
+        </style>
+</html>
