@@ -31,21 +31,24 @@
         <!-- Condicionales dentro de HTML-->
         <h1>Paises: </h1>
         <ul>
-            {%if paises%}
-                {% for pais in paises %}
+            {%if paises%} {# valida si la variable paises contiene informacion #}
+                {% for pais in paises %} {# bucle para imprimir todos los paises #}
                     <li>
                         {{pais}}
                     </li>
                 {%endfor%}
-            {%else%}
+            {%else%} {# sino imprime un mensaje #}
                 <p>No hay informacion para mostrar.</p>
+            }
             {%endif%}
         </ul>
         {# COMENTARIO CON NUMERAL o ALMUADILLA#}
+
         {% comment %}
-            COMENTARIO CON CIERRE
+            COMENTARIOS MULTILINEA
         {% endcomment %}
     </div>
+    <h1 style = "color: red;">La persona es: {{persona}}</h1>
     <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--HwXlqFEY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://code4coders.files.wordpress.com/2019/05/fb96e-1lywb7ys4csml17u2fhu5ig.png%3Fw%3D700%26zoom%3D2%2522%2520Logo%2520Title%2520Text%25201%2522" class="img-thumbnail" alt="Responsive image">
     </body>
 

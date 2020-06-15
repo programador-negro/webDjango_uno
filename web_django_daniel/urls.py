@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from web_django_daniel.views import mensaje, la_fecha, calcularEdad, view_index, view_index_loader, view_index_shortcut,vista_herencias
 
 urlpatterns = [
@@ -22,9 +22,13 @@ urlpatterns = [
     path('mensaje/', mensaje),
     path('fecha/', la_fecha),
     path('edad/<int:edad>/<int:year>', calcularEdad),
-    path('vista_index/', view_index),
+    path('', view_index),
     path('vista_loader/', view_index_loader),
     path('vista_shortcut/', view_index_shortcut),
-    path('herencia/',vista_herencias)
-
+    path('herencia',vista_herencias)
 ]
+'''
+NOTA IMPORTANTE:
+	para colocar una pagina de inicio por defecto debe dejarse la url-string vacia
+	como se muestra en la linea 25
+'''

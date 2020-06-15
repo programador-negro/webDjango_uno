@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gestionPedidos',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'web_django_daniel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/user/Documents/Programacion/Python/proyectosSerios/web_django_daniel/templates/'],
+        'DIRS': ['C:/Users/user/Documents/Programacion/Python/proyectosWeb/webDjango/web_django_daniel/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +76,14 @@ WSGI_APPLICATION = 'web_django_daniel.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'dbpython',
+            'USER': 'root',
+            'PASSWORD': 'da98ni11el30',
+            'HOST': 'localhost',
+            'PORT':''
     }
 }
 
