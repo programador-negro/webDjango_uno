@@ -25,7 +25,7 @@ SECRET_KEY = 'z-=s9who$*btj)6f)7bo8yfw&&3pvbtumvxz!cbqa4z5lxsy9b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','xir.pythonanywhere.com']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'web_django_daniel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/user/Documents/Programacion/Python/proyectosWeb/webDjango/web_django_daniel/templates/'],
+        'DIRS': ['web_django_daniel/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
